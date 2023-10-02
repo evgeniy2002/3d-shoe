@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.wrapper {
+  width: 100vh;
+  height: 100vh;
+}
+.configuration {
+  position: fixed;
+  right: 24px;
+  bottom: 10vh;
+  width: 360px;
+  padding: 24px;
+  color: #fff;
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 3rem 0;
+    }
+    &__title {
+      font-size: 18px;
+      color: #000000;
+    }
+    &__values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
+.item__color {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.5rem 0 0 0;
+  cursor: pointer;
+  &__dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border: 3px solid #00000029;
+  }
+  &__label {
+    font-size: 12px;
+    margin: 15px 0 0 0;
+    color: #aaaaaac6;
+    // text-transform: capitalize;
+    font-weight: 700;
+  }
+}
+
+.item--active {
+  .item__color__dot {
+    border: 2px solid #000;
+  }
+}
+.item--active {
+  .item__color__label {
+    color: #000000;
+  }
+}
